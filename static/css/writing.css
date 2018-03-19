@@ -1,0 +1,50 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+div{
+    padding: 0;
+    margin: 0;
+}
+
+.siderbar{
+    width: 300px;
+    min-height: 100%;
+    float: left;
+    position: relative;
+    border-right-width: 1px;
+    border-right-color: #DCDCDC;
+    border-right-style: solid;
+}
+
+.nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+.icon{
+    font-size: 1.4em;
+    color:royalblue;
+}
+
+.nav li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.header{
+    height: 50px;
+    border-bottom: solid 1px #DCDCDC;
+}
+
+.footer{
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    bottom: 0;
+    border-top: #DCDCDC solid 1px;
+}
