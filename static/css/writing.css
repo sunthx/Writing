@@ -10,7 +10,7 @@ div{
 }
 
 .siderbar{
-    width: 300px;
+    width: 200px;
     min-height: 100%;
     float: left;
     position: relative;
@@ -21,30 +21,76 @@ div{
 
 .nav ul{
     padding: 0;
-    margin: 0;
+    margin: 10px 10px 0 10px;
 }
 
 .icon{
-    font-size: 1.4em;
-    color:royalblue;
+    color:rgb(90, 120, 212);
+}
+
+.icon-title{
+    margin-left: 10px;
 }
 
 .nav li{
-    margin: 0;
+    line-height: 35px;
+    height: 35px;
     padding: 0;
     list-style: none;
 }
 
 
 .header{
+    display: flex;
+    position: relative;
     height: 50px;
     border-bottom: solid 1px #DCDCDC;
+}
+
+.avatar{
+    margin: 6px;
+}
+
+.user{
+    vertical-align: middle;
+}
+
+.user span{
+    line-height: 50px;
+}
+
+.header img{
+    border-radius:50%;
+    height: 32px;
+    width: 32px;
 }
 
 .footer{
     position: absolute;
     height: 50px;
-    width: 300px;
+    width: 200px;
+    padding-top: 5px;
     bottom: 0;
     border-top: #DCDCDC solid 1px;
+}
+
+.footer p{
+    color: grey;
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+
+.footer-icons{
+    font-size: 0.8em;
+    width: auto;
+    text-align: center;
+}
+.footer-icons span{
+    margin-left: 5px;
+}
+
+.footer-icons span{
+    color:gray;
+    font-size: 2em;
 }
