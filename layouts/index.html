@@ -11,10 +11,11 @@
         <div class="siderbar">
             <div class="header">
                 <div class="avatar">
-                    <img src="https://storage.live.com/users/0x6a1dddab74c750f5/myprofile/expressionprofile/profilephoto:UserTileMedium/avatar?ck=1&ex=1&fofoff=1"/>
+                    <img src="https://storage.live.com/users/0x6a1dddab74c750f5/myprofile/expressionprofile/profilephoto:UserTileMedium/avatar?ck=1&ex=1&fofoff=1"
+                    />
                 </div>
                 <div class="user">
-                    <span>孙飞的个人博客</span>
+                    <span>{{ .Site.Title }}</span>
                 </div>
             </div>
             <div class="nav">
@@ -23,22 +24,20 @@
                         <span class="fab fa-windows icon"></span>
                         <span class="icon-title">全部文章</span>
                     </li>
+
+                    {{ range $key,$value := .Site.Taxonomies}}
+                    {{ if eq $key .Site.Params.categoryName}}
+                    <p>
+                        <span class="fab fa-windows icon"></span>
+                    <p>
+                    {{ range $name,$value := $value }}
                     <li>
                         <span class="fas fa-list-ul icon"></span>
-                        <span class="icon-title">Windows Dev</span>
+                        <span class="icon-title">{{ $name }}</span>
                     </li>
-                    <li>
-                        <span class="fas fa-list-ul icon"></span>
-                        <span class="icon-title">Golang Dev</span>
-                    </li>
-                    <li>
-                        <span class="fas fa-list-ul icon"></span>
-                        <span class="icon-title">算法与数据结构</span>
-                    </li>
-                    <li>
-                        <span class="fas fa-list-ul icon"></span>
-                        <span class="icon-title">职业发展</span>
-                    </li>
+                    {{ end }} 
+                    {{ end }}
+                    {{ end }}
                 </ul>
             </div>
             <div class="footer">
@@ -46,7 +45,7 @@
                     <span class="fab fa-github"></span>
                     <span class="fab fa-weibo"></span>
                 </div>
-                <p>京ICP证070598号 | Powered By Hugo</a>
+                <p>京ICP证070598号</a>
             </div>
         </div>
 
