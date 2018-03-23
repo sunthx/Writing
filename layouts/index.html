@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="{{ .Site.LanguageCode }}">
 
 <head>
     <meta charset="UTF-8">
@@ -26,18 +26,17 @@
                     </li>
 
                     {{ range $key,$value := .Site.Taxonomies}}
-                    {{ if eq $key .Site.Params.categoryName}}
+                    {{ if eq $key "categories"}}
                     <p>
                         <span class="fab fa-windows icon"></span>
+                        <span class="icon-title">所有类别</span>
                     <p>
                     {{ range $name,$value := $value }}
                     <li>
                         <span class="fas fa-list-ul icon"></span>
                         <span class="icon-title">{{ $name }}</span>
                     </li>
-                    {{ end }} 
-                    {{ end }}
-                    {{ end }}
+                    {{ end }} {{ end }} {{end}}
                 </ul>
             </div>
             <div class="footer">
@@ -50,8 +49,11 @@
         </div>
 
         <div class="content">
-            <div class="articles"></div>
-            <div class="articles"></div>
+            <ul>
+                {{ range where .Site.Pages "Type" "post"}}
+                <li>{{ .Title }}</li>
+                {{ end}}
+            </ul>
         </div>
     </div>
 </body>

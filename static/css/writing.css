@@ -10,24 +10,46 @@ body{
 div{
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 
+ ul,li{
+     padding: 0;
+     margin: 0;
+ }
+
 .wrapper{
+    display: -webkit-flex;
+    display: flex;
     background-color: white;
-    height: 100%;
     width: 1200px;
     margin: 0 auto;
     box-shadow: 0px 0px 5px #888888;
+
+    /* flex  */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* 定义了项目在主轴上的对齐方式 */
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
+.content{
+    order: 1;
+    background-color: aqua;
+    flex: 0 0 85%;
+}
+
+
 .siderbar{
-    width: 220px;
-    min-height: 100%;
-    float: left;
-    position: relative;
+    order: 0;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
     border-right-width: 1px;
     border-right-color: #DCDCDC;
     border-right-style: solid;
+    flex: 0 0 15%;
 }
 
 .nav ul{
@@ -52,8 +74,8 @@ div{
 
 
 .header{
+    display: -webkit-flex;
     display: flex;
-    position: relative;
     height: 50px;
     border-bottom: solid 1px #DCDCDC;
 }
@@ -77,11 +99,11 @@ div{
 }
 
 .footer{
-    position: absolute;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
     height: 50px;
-    width: 220px;
     padding-top: 5px;
-    bottom: 0;
     border-top: #DCDCDC solid 1px;
 }
 
@@ -97,6 +119,7 @@ div{
     width: auto;
     text-align: center;
 }
+
 .footer-icons span{
     margin-left: 5px;
 }
