@@ -51,7 +51,11 @@
         <div class="content">
             <ul>
                 {{ range where .Site.Pages "Type" "post"}}
-                <li>{{ .Title }}</li>
+                <li>
+                    <div class="item">
+                       {{.Title}}
+                    </div>
+                </li>
                 {{ end}}
             </ul>
         </div>
