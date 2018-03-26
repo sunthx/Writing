@@ -9,42 +9,9 @@
 <body>
     <div class="wrapper">
         <div class="siderbar">
-            <header class="header">
-                <div class="avatar">
-                    <img src="https://storage.live.com/users/0x6a1dddab74c750f5/myprofile/expressionprofile/profilephoto:UserTileMedium/avatar?ck=1&ex=1&fofoff=1"/>
-                </div>
-                <div class="user">
-                    <span>{{ .Site.Title }}</span>
-                </div>
-            </header>
-            <div class="nav">
-                <ul>
-                    <li>
-                        <span class="fab fa-windows icon"></span>
-                        <span class="icon-title">全部文章</span>
-                    </li>
-
-                    {{ range $key,$value := .Site.Taxonomies}}
-                    {{ if eq $key "categories"}}
-                    <p>
-                        <span class="fab fa-windows icon"></span>
-                        <span class="icon-title">所有类别</span>
-                    <p>
-                    {{ range $name,$value := $value }}
-                    <li>
-                        <span class="fas fa-list-ul icon"></span>
-                        <span class="icon-title">{{ $name }}</span>
-                    </li>
-                    {{ end }} {{ end }} {{end}}
-                </ul>
-            </div>
-            <footer class="footer">
-                <div class="footer-icons">
-                    <span class="fab fa-github"></span>
-                    <span class="fab fa-weibo"></span>
-                </div>
-                <p>京ICP证070598号</a>
-            </footer>
+           {{ partial "header.html" . }}
+           {{ partial "nav.html" . }}
+           {{ partial "footer.html" . }}
         </div>
 
         <div class="content">
