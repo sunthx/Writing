@@ -1,0 +1,29 @@
+<ul class="article-list">
+    {{ range where .Site.Pages "Type" "post"}}
+    <li>
+        <div class="item">
+            <div class="item-title">
+                <a href="{{ .URL }}"># {{ .Title }}</a>
+            </div>
+            <div class="item-tags">
+                {{ range .Params.categories }}
+                <a>{{ . }}</a>
+                {{ end}} {{ range .Params.tags }}
+                <a>
+                    <span class="fas fa-tag"></span>
+                    <span>{{ . }}</span>
+                </a>
+                {{ end}}
+            </div>
+
+            <div class="item-descirption">
+                {{ .Summary | plainify | htmlUnescape |truncate 500 }}
+                <span>
+                    <a href="{{ .URL }}">阅读全文</a>
+                </span>
+            </div>
+        </div>
+    </li>
+    {{ end}}
+</ul>
+{{ partial "pagination.html" . }}

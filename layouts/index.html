@@ -9,22 +9,13 @@
 <body>
     <div class="wrapper">
         <div class="siderbar">
-           {{ partial "header.html" . }}
-           {{ partial "nav.html" . }}
-           {{ partial "footer.html" . }}
+            {{ partial "header.html" . }} 
+            {{ partial "nav.html" . }} 
+            {{ partial "footer.html" . }}
         </div>
 
         <div class="content">
-            <ul>
-                {{ range where .Site.Pages "Type" "post"}}
-                <li>
-                    <div class="item">
-                      <h1><a href="http://www.baidu.com">{{ .Title }}</a></h1>
-                      {{ .Content | safeHTML | truncate 250 }}
-                    </div>
-                </li>
-                {{ end}}
-            </ul>
+            {{ partial "posts.html" . }}
         </div>
     </div>
 </body>
