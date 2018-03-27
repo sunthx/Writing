@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("../images/bg.gif");
     background-repeat: repeat;
     background-color: white;
@@ -7,23 +7,23 @@ body{
     font-size: 14px;
 }
 
-div{
+div {
     padding: 0;
     margin: 0;
 }
 
-ul{
-     padding: 0;
-     margin: 0;
- }
+ul {
+    padding: 0;
+    margin: 0;
+}
 
-li{
+li {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.wrapper{
+.wrapper {
     display: -webkit-flex;
     display: flex;
     background-color: white;
@@ -31,25 +31,22 @@ li{
     margin: 0 auto;
     height: 100%;
     box-shadow: 0px 0px 5px #888888;
-
     /* flex  */
     flex-direction: row;
     flex-wrap: nowrap;
-
     /* 定义了项目在主轴上的对齐方式 */
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.content{
+.content {
     overflow: auto;
     height: 100%;
     order: 1;
     flex: 0 0 85%;
 }
 
-
-.siderbar{
+.siderbar {
     height: 100%;
     order: 0;
     border-right: #DCDCDC solid 1px;
@@ -60,10 +57,9 @@ li{
 }
 
 
-
 /* header */
 
-.header{
+.header {
     display: -webkit-flex;
     display: flex;
     height: 50px;
@@ -71,98 +67,124 @@ li{
     border-bottom: solid 1px #DCDCDC;
 }
 
-.avatar{
+.avatar {
     margin: 6px;
 }
 
-.user{
+.user {
     vertical-align: middle;
 }
 
-.user span{
+.user span {
     line-height: 50px;
 }
 
-.header img{
-    border-radius:50%;
+.header img {
+    border-radius: 50%;
     height: 32px;
     width: 32px;
 }
 
+
 /* nav */
 
-.nav{
+.nav {
     flex: 1;
     width: 100%;
 }
 
-.nav ul{
+.nav ul {
     padding: 0;
     margin: 10px 10px 0 10px;
 }
 
-.icon{
-    color:rgb(90, 120, 212);
+.icon {
+    color: rgb(90, 120, 212);
 }
 
-.icon-title{
+.icon-title {
     margin-left: 10px;
 }
 
-.nav li{
+.nav li {
     line-height: 35px;
     height: 35px;
     padding: 0;
     list-style: none;
 }
 
+
 /* article list */
 
-.article-list{
+.article-list {
     padding: 10px;
 }
 
-.article-list li{
+.article-list li {
     margin: 0px 0px 30px 0px;
 }
 
-.item-title a{
+.item-title a {
     color: dimgray;
     font-size: 18px;
     text-decoration-line: none;
 }
 
-.item-tags{
+.item-tags {
     margin: 5px 0px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-flow: wrap;
 }
 
-.item-tags a{
-    border-radius:5px;
+.item-tags a {
+    border-radius: 5px;
     padding: 2px 5px;
     font-size: 12px;
     margin-right: 5px;
     color: white;
-    background-color:rgb(90, 120, 212);
+    background-color: rgb(90, 120, 212);
 }
 
 .item-descirption span a {
-    border-radius:5px;
+    border-radius: 5px;
     padding: 2px 5px;
     font-size: 12px;
     margin-right: 5px;
     color: white;
     text-decoration-line: none;
-    background-color:rgb(90, 120, 212);
+    background-color: rgb(90, 120, 212);
 }
+
 
 /* pagination */
 
+.pagination {
+    text-align: center;
+}
+
+.pagination li {
+    display: inline;
+    text-align: center;
+}
+
+.pagination li span {
+    color: rgb(90, 120, 212);
+    margin: 0;
+    text-align: center;
+    width: 3.2rem;
+}
+
+.pagination a span {
+    margin: 0;
+    text-align: center;
+    width: 3.2rem;
+}
+
+
 /* footer */
 
-.footer{
+.footer {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -173,24 +195,24 @@ li{
     align-self: flex-end;
 }
 
-.footer p{
+.footer p {
     color: grey;
     font-size: 0.8em;
     text-align: center;
     margin: 5px 0 0 0;
 }
 
-.footer-icons{
+.footer-icons {
     font-size: 0.8em;
     width: auto;
     text-align: center;
 }
 
-.footer-icons span{
+.footer-icons span {
     margin-left: 5px;
 }
 
-.footer-icons span{
-    color:gray;
+.footer-icons span {
+    color: gray;
     font-size: 2em;
 }

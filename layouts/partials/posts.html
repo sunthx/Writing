@@ -1,5 +1,5 @@
-<ul class="article-list">
-    {{ range where .Site.Pages "Type" "post"}}
+<ul class="article-list">   
+    {{ range (.Paginator 6).Pages }}
     <li>
         <div class="item">
             <div class="item-title">
