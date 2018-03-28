@@ -5,16 +5,7 @@
             <div class="item-title">
                 <a href="{{ .URL }}"># {{ .Title }}</a>
             </div>
-            <div class="item-tags">
-                {{ range .Params.categories }}
-                <a>{{ . }}</a>
-                {{ end}} {{ range .Params.tags }}
-                <a>
-                    <span class="fas fa-tag"></span>
-                    <span>{{ . }}</span>
-                </a>
-                {{ end}}
-            </div>
+            {{ partial "tags.html" .}}
 
             <div class="item-descirption">
                 {{ .Summary | plainify | htmlUnescape |truncate 500 }}

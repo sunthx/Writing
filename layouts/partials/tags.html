@@ -1,0 +1,10 @@
+<div class="tags">
+    {{ range .Params.categories }}
+    <a>{{ . }}</a>
+    {{ end}} {{ range .Params.tags }}
+    <a>
+        <span class="fas fa-tag"></span>
+        <span>{{ . }}</span>
+    </a>
+    {{ end}}
+</div>
