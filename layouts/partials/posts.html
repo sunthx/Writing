@@ -3,14 +3,14 @@
     <li>
         <div class="item">
             <div class="item-title">
-                <a href="{{ .URL }}"># {{ .Title }}</a>
+                <a href="{{ .Permalink }}"># {{ .Title }}</a>
             </div>
             {{ partial "tags.html" .}}
 
             <div class="item-descirption">
-                {{ .Summary | plainify | htmlUnescape |truncate 250 }}
+                {{ .Summary |truncate 250 }}
                 <span>
-                    <a class="linkButton" href="{{ .URL }}">阅读全文</a>
+                    <a class="linkButton" href="{{ .Permalink }}">阅读全文</a>
                 </span>
             </div>
         </div>

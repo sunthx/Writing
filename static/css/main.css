@@ -1,5 +1,6 @@
 html{
     height: 100%;
+    color: dimgray;
 }
 
 body {
@@ -28,6 +29,7 @@ li {
 }
 
 a {
+    color: dimgray;
     text-decoration-line: none;
 }
 
@@ -127,7 +129,7 @@ a {
 .nav li:hover{
     color: white;
     cursor: pointer;
-    background-color: rgb(168, 187, 243);
+    background-color:rgb(89, 119, 209); 
 }
 
 .nav li:hover .icon{
@@ -135,7 +137,7 @@ a {
 }
 
 .nav li:active{
-    background-color: rgb(89, 119, 209);
+    background-color: rgb(168, 187, 243);
     color: white;
 }
 
@@ -150,8 +152,12 @@ a {
 }
 
 .item-title a {
-    color: dimgray;
     font-size: 18px;
+    text-decoration-line: none;
+}
+
+.item-title a:hover{
+    color:  rgb(90, 120, 212); 
     text-decoration-line: none;
 }
 
