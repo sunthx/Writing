@@ -5,16 +5,16 @@
             <span class="icon-title">全部文章</span>
         </li>
 
-        {{ range $key,$value := .Site.Taxonomies}} {{ if eq $key "categories"}}
-        <p>
-            <span class="fab fa-windows icon"></span>
-            <span class="icon-title">所有类别</span>
-            <p>
-                {{ range $name,$value := $value }}
-                <li>
-                    <span class="fas fa-list-ul icon"></span>
-                    <span class="icon-title">{{ $name }}</span>
-                </li>
-                {{ end }} {{ end }} {{end}}
+        {{ range $key,$value := .Site.Taxonomies}} 
+        {{ if eq $key "categories"}} 
+        {{ range $name,$value := $value }}
+        <li>
+            <span class="fas fa-list-ul icon"></span>
+            {{ $categoryName := upper $name}}
+            <span class="icon-title">{{ replace $categoryName "-" " "}}</span>
+        </li>
+        {{ end }} 
+        {{ end }} 
+        {{ end }}
     </ul>
 </div>

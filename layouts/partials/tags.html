@@ -1,8 +1,11 @@
 <div class="tags">
     {{ range .Params.categories }}
-    <a>{{ . }}</a>
+    <a class="linkButton">
+        <span class="fas fa-at"></span>
+        <span>{{ . }}</span>
+    </a>
     {{ end}} {{ range .Params.tags }}
-    <a>
+    <a class="linkButton">
         <span class="fas fa-tag"></span>
         <span>{{ . }}</span>
     </a>

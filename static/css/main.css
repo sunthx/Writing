@@ -27,6 +27,10 @@ li {
     margin: 0;
 }
 
+a {
+    text-decoration-line: none;
+}
+
 .wrapper {
     background-color: white;
     display: -webkit-flex;
@@ -89,6 +93,10 @@ li {
     width: 32px;
 }
 
+.header:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
 
 /* nav */
 
@@ -99,7 +107,6 @@ li {
 
 .nav ul {
     padding: 0;
-    margin: 10px 10px 0 10px;
 }
 
 .icon {
@@ -112,11 +119,25 @@ li {
 
 .nav li {
     line-height: 35px;
-    height: 35px;
-    padding: 0;
+    height: 40px;
+    padding-left: 10px;
     list-style: none;
 }
 
+.nav li:hover{
+    color: white;
+    cursor: pointer;
+    background-color: rgb(168, 187, 243);
+}
+
+.nav li:hover .icon{
+    color: white;
+}
+
+.nav li:active{
+    background-color: rgb(89, 119, 209);
+    color: white;
+}
 
 /* article list */
 
@@ -141,25 +162,21 @@ li {
     flex-flow: wrap;
 }
 
-.tags a {
+.linkButton {
     border-radius: 5px;
-    padding: 2px 5px;
-    font-size: 12px;
-    margin-right: 5px;
-    color: white;
-    background-color: rgb(90, 120, 212);
-}
-
-.item-descirption span a {
-    border-radius: 5px;
-    padding: 2px 5px;
+    padding: 5px;
     font-size: 12px;
     margin-right: 5px;
     color: white;
     text-decoration-line: none;
-    background-color: rgb(90, 120, 212);
+    background-color: rgb(90, 120, 212); 
 }
 
+.linkButton:hover{
+    cursor: pointer;
+    text-decoration-line: none;
+    background-color: rgb(168, 187, 243);
+}
 
 /* pagination */
 
@@ -212,11 +229,13 @@ li {
     text-align: center;
 }
 
-.footer-icons span {
+.footer-icons a {
+    color: gray;
+    font-size: 2em;
     margin-left: 5px;
 }
 
-.footer-icons span {
-    color: gray;
-    font-size: 2em;
+.footer-icons a:hover{
+    cursor: pointer;
+    color:  rgb(89, 119, 209);
 }

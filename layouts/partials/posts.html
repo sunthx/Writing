@@ -8,9 +8,9 @@
             {{ partial "tags.html" .}}
 
             <div class="item-descirption">
-                {{ .Summary | plainify | htmlUnescape |truncate 500 }}
+                {{ .Summary | plainify | htmlUnescape |truncate 250 }}
                 <span>
-                    <a href="{{ .URL }}">阅读全文</a>
+                    <a class="linkButton" href="{{ .URL }}">阅读全文</a>
                 </span>
             </div>
         </div>
