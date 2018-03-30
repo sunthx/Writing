@@ -151,14 +151,28 @@ a {
     margin: 0px 0px 30px 0px;
 }
 
+.item-title{
+    margin-bottom: 10px;
+}
+
 .item-title a {
     font-size: 18px;
     text-decoration-line: none;
+    padding-left: 10px;
+    border-left:  dimgray solid 2px;
 }
 
 .item-title a:hover{
+    border-left: rgb(90, 120, 212) solid 5px;
     color:  rgb(90, 120, 212); 
     text-decoration-line: none;
+}
+
+.readMore {
+    display: block;
+    width: 80px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .tags {

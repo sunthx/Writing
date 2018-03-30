@@ -3,16 +3,14 @@
     <li>
         <div class="item">
             <div class="item-title">
-                <a href="{{ .Permalink }}"># {{ .Title }}</a>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
             </div>
             {{ partial "tags.html" .}}
-
-            <div class="item-descirption">
-                摘要：{{ .Summary |truncate 100 }}
-                <span>
-                    <a class="linkButton" href="{{ .Permalink }}">阅读全文</a>
-                </span>
-            </div>
+            摘要：{{ .Summary | truncate 250 }}
+            <a class="linkButton readMore" href="{{ .Permalink }}">
+                <span>阅读全文</span>
+                <span class="fas fa-arrow-right"></span>
+            </a>
         </div>
     </li>
     {{ end}}
