@@ -8,7 +8,7 @@
             {{ partial "tags.html" .}}
 
             <div class="item-descirption">
-                {{ .Summary |truncate 250 }}
+                摘要：{{ .Summary |truncate 100 }}
                 <span>
                     <a class="linkButton" href="{{ .Permalink }}">阅读全文</a>
                 </span>
