@@ -1,13 +1,29 @@
 <div class="tags">
+    {{ $baseUrl := .Site.BaseURL }}
+
+    <!-- categories -->
+    {{ if isset .Params "categories"}}
+    {{ $count := len .Params.categories}}
+    {{ if gt $count 0}}
     {{ range .Params.categories }}
-    <a class="linkButton">
+    <a class="linkButton" href="{{ $baseUrl }}categories/{{ . | urlize }}">
         <span class="fas fa-at"></span>
         <span>{{ . }}</span>
     </a>
-    {{ end}} {{ range .Params.tags }}
-    <a class="linkButton">
+    {{ end }} 
+    {{ end }}
+    {{ end }}
+
+    <!-- tags -->
+    {{ if isset .Params "tags"}}
+    {{ $count := len .Params.tags}}
+    {{ if gt $count 0}}
+    {{ range .Params.tags }}
+    <a class="linkButton" href="{{ $baseUrl }}tags/{{ . | urlize }}">
         <span class="fas fa-tag"></span>
         <span>{{ . }}</span>
     </a>
-    {{ end}}
+    {{ end }} 
+    {{ end }}
+    {{ end }}
 </div>

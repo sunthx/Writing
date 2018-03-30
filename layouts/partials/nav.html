@@ -1,17 +1,14 @@
 <div class="nav">
     <ul>
-        <li>
-            <span class="fab fa-windows icon"></span>
-            <span class="icon-title">全部文章</span>
-        </li>
-
         {{ range $key,$value := .Site.Taxonomies}} 
         {{ if eq $key "categories"}} 
         {{ range $name,$value := $value }}
         <li>
-            <span class="fas fa-list-ul icon"></span>
-            {{ $categoryName := upper $name}}
-            <span class="icon-title">{{ replace $categoryName "-" " "}}</span>
+            <a href="{{ $.Site.BaseURL }}categories/{{ $name }}">
+                <span class="fas fa-list-ul icon"></span>
+                {{ $categoryName := upper $name}}
+                <span class="icon-title">{{ replace $categoryName "-" " "}}</span>
+            </a>
         </li>
         {{ end }} 
         {{ end }} 

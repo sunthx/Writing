@@ -1,7 +1,13 @@
 <footer class="footer">
+    {{ if isset  .Site.Params "social"}}
     <div class="footer-icons">
-        <a class="fab fa-github"></a>
-        <a class="fab fa-weibo"></a>
+    {{ $count := len .Site.Params.social }}
+    {{ if gt $count 0}}
+    {{ range .Site.Params.social }}
+    <a class="{{.icon_pack}} {{.icon}}" href="{{ .link }}"></a>
+    {{ end }}
+    {{ end }}
     </div>
-    <p>京ICP证070598号</a>
+    {{ end}}
+    <p>{{ .Site.Params.Icp}}</a>
 </footer>

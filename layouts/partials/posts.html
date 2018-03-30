@@ -1,12 +1,11 @@
-<ul class="article-list">   
+<ul class="article-list">
     {{ range (.Paginator 6).Pages }}
     <li>
         <div class="item">
             <div class="item-title">
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
             </div>
-            {{ partial "tags.html" .}}
-            摘要：{{ .Summary | truncate 250 }}
+            {{ partial "tags.html" .}} 摘要：{{ .Summary | truncate 250 }}
             <a class="linkButton readMore" href="{{ .Permalink }}">
                 <span>阅读全文</span>
                 <span class="fas fa-arrow-right"></span>
