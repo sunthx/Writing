@@ -2,14 +2,16 @@
 
 pre {
     border: 1px solid #ddd;
-    box-shadow: 5px 5px 5px #eee;
-    background: #f8f8f8;
-    padding: 1em;
+    padding: 0.5em;
+    font-size: 1.2em;
     overflow-x: auto;
+    font-family: "Lucida Console", Monaco, monospace;
 }
 
 code {
     background: #f9f9f9;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 85%;
 }
 
 pre code {
