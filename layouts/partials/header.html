@@ -1,10 +1,15 @@
-<header>
-    <a class="header" href="{{ .Site.BaseURL }}">
-        <div class="avatar">
-            <img src="{{ .Site.BaseURL }}images/fav.jpg"/>
-        </div>
-        <div class="user">
-            <span>{{ .Site.Title }}</span>
-        </div>
-    </a>
+<header class="header">
+    <div class="header-title">
+        <h2>{{ .Site.Title }}</h2>
+    </div>
+    {{ if isset  .Site.Params "social"}}
+    <div class="header-social">
+    {{ $count := len .Site.Params.social }}
+    {{ if gt $count 0}}
+    {{ range .Site.Params.social }}
+    <a class="{{.icon_pack}} {{.icon}} icon" href="{{ .link }}"></a>
+    {{ end }}
+    {{ end }}
+    </div>
+    {{ end}}
 </header>

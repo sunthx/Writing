@@ -1,17 +1,13 @@
-<div class="nav">
-    <ul>
-        {{ range $key,$value := .Site.Taxonomies}} 
-        {{ if eq $key "categories"}} 
-        {{ range $name,$value := $value }}
-        <li>
-            <a href="{{ $.Site.BaseURL }}categories/{{ $name }}">
-                <span class="fas fa-list-ul icon"></span>
-                {{ $categoryName := upper $name}}
-                <span class="icon-title">{{ replace $categoryName "-" " "}}</span>
-            </a>
-        </li>
-        {{ end }} 
-        {{ end }} 
-        {{ end }}
-    </ul>
-</div>
+<nav class="nav">
+    {{ range $key,$value := .Site.Taxonomies}}
+    {{ if eq $key "categories"}}
+    {{ range $name,$value := $value }}
+    <a href="{{ $.Site.BaseURL }}categories/{{ $name }}">
+        <span class="fas fa-list-ul"></span>
+        {{ $categoryName := upper $name}}
+        <span class="icon-title">{{ replace $categoryName "-" " "}}</span>
+    </a>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+</nav>

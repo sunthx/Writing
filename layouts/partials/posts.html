@@ -1,17 +1,23 @@
-<ul class="article-list">
-    {{ range (.Paginator 6).Pages }}
-    <li>
-        <div class="item">
-            <div class="item-title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </div>
-            {{ partial "tags.html" .}} 摘要：{{ .Summary | truncate 250 }}
-            <a class="linkButton readMore" href="{{ .Permalink }}">
-                <span>阅读全文</span>
-                <span class="fas fa-arrow-right"></span>
-            </a>
+<div class="post-list">
+    {{ range (.Paginator 10).Pages }}
+    <div class="post-list-item">
+        <div class="post-item-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
         </div>
-    </li>
+
+        <div class="post-item-category">
+            <p>类别：<a href="compute">计算机</a></p>
+        </div>
+
+        <div class="post-item-description">
+            {{ .Summary | truncate 250 }}
+        </div>
+
+        <div class="post-item-readmore">
+            <a href="{{ .Permalink }}">阅读全文</a>
+        </div>
+    </div>
     {{ end}}
-</ul>
+</div>
+
 {{ partial "pagination.html" . }}

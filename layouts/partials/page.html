@@ -1,10 +1,4 @@
-<section class="post">
-    <article>
-        <header>
-            {{ .Title }}
-        </header>
-        {{ partial "tags.html" .}}
-        
-        {{ .Content }}
-    </article>
-</section>
+<article class="markdown-body">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+</article>

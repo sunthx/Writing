@@ -7,16 +7,16 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="siderbar">
-            {{ partial "header.html" . }} 
-            {{ partial "nav.html" . }} 
-            {{ partial "footer.html" . }}
-        </div>
-
+    <div class="container">
+        {{ partial "header.html" . }}
+        {{ partial "nav.html" . }}
         <div class="content">
-            {{ partial "posts.html" . }}
+            <div clas="detail">
+                {{ partial "posts.html" . }}
+            </div>
+            {{ partial "sider.html" .}}
         </div>
+        {{ partial "footer.html" . }}
     </div>
 </body>
 
