@@ -6,24 +6,9 @@
     <div class="sider-new-posts">
         <h3>最近文章</h3>
         <ul>
-            <li><a>[教程]如何使用通过浏览器控制USB设备？</a></li>
-            <li><a>[教程]如何使用通过浏览器控制USB设备？</a></li>
-            <li><a>[教程]如何使用通过浏览器控制USB设备？</a></li>
-            <li><a>[教程]如何使用通过浏览器控制USB设备？</a></li>
-            <li><a>[教程]如何使用通过浏览器控制USB设备？</a></li>
-            <li><a>[教程]如何使用通过浏览器控制USB设备？</a></li>
-        </ul>
-    </div>
-
-    <div class="sider-category">
-        <h3>文章类别</h3>
-        <ul>
-            <li><a>计算机</a></li>
-            <li><a>计算机</a></li>
-            <li><a>计算机</a></li>
-            <li><a>计算机</a></li>
-            <li><a>计算机</a></li>
-            <li><a>计算机</a></li>
+            <!-- {{ range (.Paginator 15).Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end}} -->
         </ul>
     </div>
 </div>

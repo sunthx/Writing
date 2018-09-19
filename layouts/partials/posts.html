@@ -5,12 +5,12 @@
             <a href="{{ .Permalink }}">{{ .Title }}</a>
         </div>
 
-        <div class="post-item-category">
+        <!-- <div class="post-item-category">
             <p>类别：<a href="compute">计算机</a></p>
-        </div>
+        </div> -->
 
         <div class="post-item-description">
-            {{ .Summary | truncate 250 }}
+            {{ .Summary | truncate 100 }}
         </div>
 
         <div class="post-item-readmore">

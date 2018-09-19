@@ -27,6 +27,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.active {
+    color: red;
+}
+
 .icon {
     color: #24292e;
     font-size: 25px;
@@ -95,9 +99,13 @@ a:hover {
     align-items: center;
 }
 
-.nav a {
+.nav-item {
     color: #24292e;
     margin-right: 20px;
+}
+
+.nav-item-active {
+    color: red;
 }
 
 /* Content */
@@ -144,8 +152,8 @@ a:hover {
 
 /* POST */
 .post-list-item {
-    padding-bottom: 16px;
     margin-bottom: 16px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #eaecef;
 }
 
@@ -168,6 +176,6 @@ a:hover {
     height: 30px;
 }
 
-.post-item-readmore a{
+.post-item-readmore a {
     align-self: center;
 }

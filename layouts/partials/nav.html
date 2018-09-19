@@ -1,13 +1,6 @@
 <nav class="nav">
-    {{ range $key,$value := .Site.Taxonomies}}
-    {{ if eq $key "categories"}}
-    {{ range $name,$value := $value }}
-    <a href="{{ $.Site.BaseURL }}categories/{{ $name }}">
-        <span class="fas fa-list-ul"></span>
-        {{ $categoryName := upper $name}}
-        <span class="icon-title">{{ replace $categoryName "-" " "}}</span>
-    </a>
-    {{ end }}
-    {{ end }}
+    {{ range $value := .Site.Menus.main}}
+    <a href="{{ .URL }}" class="nav-item">
+    {{ .Title }}</a>
     {{ end }}
 </nav>
