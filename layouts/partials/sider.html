@@ -6,9 +6,9 @@
     <div class="sider-new-posts">
         <h3>最近文章</h3>
         <ul>
-            <!-- {{ range (.Paginator 15).Pages }}
+            {{ range .Pages }}
             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-            {{ end}} -->
+            {{ end}}
         </ul>
     </div>
 </div>
