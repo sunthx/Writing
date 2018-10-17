@@ -1,4 +1,4 @@
-# hugo-writing
+# simple-hugo
 
 > a simple theme for hugo
 
@@ -8,25 +8,26 @@
 $ cd your_site_path/
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/sunthx/hugo-writing.git
+$ git clone https://github.com/sunthx/simple-hugo.git
 ```
 **Configuration**
 
 ```xml
-baseURL = "http://localhost:1313"
+baseURL = "https://localhost:1313"
 languageCode = "zh-cn"
-title = "Sunthx Blog"
-
+title = "SUNTH'S BLOG"
 theme="hugo-writing"
-    
-[taxonomies]
-    tag = "tags"
-    category = "categories"
+
+[menu]
+    [[menu.main]]
+        identifier = "index"
+        name = "index"
+        title = "主页"
+        url="/"
+        weight = 1
 
 [params]
-    categoryName = "categories"
-    tagName = "tags"
-    Icp = "京ICP证XXYX号"
+    Icp = "京ICP备17034094号-1"
 
 [[params.social]]
     icon = "fa-github"
@@ -38,10 +39,6 @@ theme="hugo-writing"
     icon_pack = "fab"
     link = "https://weibo.com/runningdogman"
 ```
-
-**ScreenShot**
-
-![](images/screenshot.png)
 
 **License**
 

@@ -1,0 +1,26 @@
+baseURL = "https://localhost:1313"
+languageCode = "zh-cn"
+title = "SUNTH'S BLOG"
+theme="simple-hugo"
+
+[menu]
+    [[menu.main]]
+        identifier = "index"
+        name = "index"
+        title = "主页"
+        url="/"
+        weight = 1
+
+[params]
+    Icp = "京ICP备17034094号-1"
+
+[[params.social]]
+    icon = "fa-github"
+    icon_pack = "fab"
+    link = "https://www.github.com/sunthx"
+
+[[params.social]]
+    icon = "fa-weibo"
+    icon_pack = "fab"
+    link = "https://weibo.com/runningdogman"
+
