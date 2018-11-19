@@ -16,7 +16,7 @@ $ git clone https://github.com/sunthx/simple-hugo.git
 baseURL = "https://localhost:1313"
 languageCode = "zh-cn"
 title = "SUNTH'S BLOG"
-theme="hugo-writing"
+theme="simple-hugo"
 
 [menu]
     [[menu.main]]
@@ -27,7 +27,7 @@ theme="hugo-writing"
         weight = 1
 
 [params]
-    Icp = "京ICP备17034094号-1"
+    Icp = "京ICP备XXX号-X"
 
 [[params.social]]
     icon = "fa-github"
