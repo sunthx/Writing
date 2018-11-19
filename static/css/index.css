@@ -44,7 +44,7 @@ a:hover {
 
 
 .container{
-    width: 1000px;
+    max-width: 980px;
     display: flex;
     /* Webkit 内核的浏览器，必须加上-webkit前缀。 */
     display: -webkit-flex;
@@ -116,20 +116,6 @@ a:hover {
     flex-direction: row;
 }
 
-.detail {
-    flex: 1 1 auto;
-    margin-right: 50px;
-}
-
-.sider{
-    width: 250px;
-    padding: 5px;
-    flex: 0 0 auto;
-}
-
-.sider img {
-    max-width:100%;
-}
 
 /* Footer */
 .footer{
@@ -137,7 +123,6 @@ a:hover {
     display: flex;
     display: -webkit-flex;
     align-items: center;
-    border-top: 1px solid #eaecef;
 }
 
 /* RECENT */
@@ -178,4 +163,17 @@ a:hover {
 
 .post-item-readmore a {
     align-self: center;
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
 }

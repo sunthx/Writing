@@ -32,9 +32,7 @@
           {{ partial "header.html" . }}
           {{ partial "nav.html" . }}
           <div class="content">
-              <div class="detail">
-                {{ block "content" . }}{{ end }}
-              </div>
+            {{ block "content" . }}{{ end }}
           </div>
           {{ partial "footer.html" . }}
       </div>

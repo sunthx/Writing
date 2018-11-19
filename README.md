@@ -2,6 +2,8 @@
 
 > a simple theme for hugo
 
+![](images/screenshot.png)
+
 **Installation with Hugo**
 
 ```
